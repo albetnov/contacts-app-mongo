@@ -1,0 +1,20 @@
+{{#> main card="xl"}}
+<h2 class="text-xl">Detail Kontak</h2>
+<hr class="max-w-xl">
+<ul class="my-3 list-disc ml-5">
+    <li>Nama: {{ contact.nama }}</li>
+    <li>No HP: {{ contact.nohp }}</li>
+    <li>Email: {{ contact.email }}</li>
+</ul>
+<hr class="max-w-xl mb-3">
+<a href="#"
+    class=" bg-blue-400 px-3 py-2 rounded-full shadow-lg text-white text-base font-semibold hover:opacity-80 focus:border-0 focus:ring focus:ring-blue-200">Edit</a>
+
+<a href="#"
+    class="bg-red-400 px-3 py-2 rounded-full shadow-lg text-white text-base font-semibold hover:opacity-80 focus:border-0 focus:ring focus:ring-red-200"
+    onclick="return confirm('Yakin?')">Hapus</a>
+
+<a href="/"
+    class="block mt-7 bg-sky-400 px-3 py-2 rounded-lg shadow-lg text-white text-base font-semibold hover:opacity-80 focus:border-0 focus:ring focus:ring-sky-200 max-w-fit">&laquo;
+    Kembali</a>
+{{/main}}

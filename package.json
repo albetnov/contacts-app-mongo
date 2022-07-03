@@ -1,0 +1,27 @@
+{
+  "name": "contacts-app-mongo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js -e js,hbs,html,css",
+    "watch": "tailwindcss -i ./public/src/input.css -o ./public/style/style.css --watch",
+    "build": "tailwindcss -i ./public/src/input.css -o ./public/style/style.min.css --minify",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "hbs": "^4.2.0",
+    "mongoose": "^6.4.2",
+    "nodemon": "^2.0.18"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.1.4"
+  }
+}
