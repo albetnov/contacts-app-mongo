@@ -1,32 +1,37 @@
 {{#> main card="full"}}
 <h1 class="text-4xl">Contacts App</h1>
 {{> alert variant="success" }}
-<table class="table-auto shadow mt-3">
-    <tr class="bg-slate-500 text-white">
-        <th class=" px-2 py-2">#</th>
-        <th class=" px-2 py-2">Nama</th>
-        <th class=" px-2 py-2">Email</th>
-        <th class=" px-2 py-2">No HP</th>
-        <th>Aksi</th>
-    </tr>
-    {{#if contacts}}
-    {{#each contacts as |contact|}}
-    <tr class="bg-white">
-        <td class=" px-2 py-2">{{inc @index}}</td>
-        <td class=" px-2 py-2">{{contact.nama}}</td>
-        <td class=" px-2 py-2">{{contact.email}}</td>
-        <td class=" px-2 py-2">{{contact.nohp}}</td>
-        <td class=" px-2 py-2">
-            <a href="/{{ contact.nama }}"
-                class="bg-lime-300 text-white text-base font-semibold py-1 px-2 rounded-full hover:opacity-80 focus:border-0 focus:ring focus:ring-lime-200">Detail</a>
-        </td>
-    <tr>
-        {{/each}}
-        {{else}}
-    <tr>
-        <td colspan="5" class="bg-pink-500 text-white font-semibold text-lg">No contacts found</td>
-    </tr>
-    {{/if}}
+<a href="/add"
+    class="block mt-3 bg-sky-400 px-3 py-2 rounded-lg shadow-lg text-white text-base font-semibold hover:opacity-80 focus:border-0 focus:ring focus:ring-sky-200 max-w-fit focus:outline-none">Tambah
+    Kontak</a>
+<div class="overflow-x-auto max-w-sm md:overflow-hidden md:max-w-fit">
+    <table class="table-auto shadow mt-3">
+        <tr class="bg-slate-500 text-white">
+            <th class="px-2 py-2">#</th>
+            <th class="px-2 py-2">Nama</th>
+            <th class="px-2 py-2">Email</th>
+            <th class="px-2 py-2">No HP</th>
+            <th>Aksi</th>
+        </tr>
+        {{#if contacts}}
+        {{#each contacts as |contact|}}
+        <tr class="bg-white">
+            <td class="px-2 py-2">{{inc @index}}</td>
+            <td class="px-2 py-2">{{contact.nama}}</td>
+            <td class="px-2 py-2">{{contact.email}}</td>
+            <td class="px-2 py-2">{{contact.nohp}}</td>
+            <td class="px-2 py-2">
+                <a href="/{{ contact.nama }}"
+                    class="bg-lime-300 text-white text-base font-semibold py-1 px-2 rounded-full hover:opacity-80 focus:border-0 focus:ring focus:ring-lime-200 focus:outline-none">Detail</a>
+            </td>
+        <tr>
+            {{/each}}
+            {{else}}
+        <tr>
+            <td colspan="5" class="bg-rose-500 text-white text-center font-semibold text-lg">No contacts found</td>
+        </tr>
+        {{/if}}
 
-</table>
+    </table>
+</div>
 {{/main}}
